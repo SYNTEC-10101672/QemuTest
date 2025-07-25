@@ -1,7 +1,7 @@
 {
   "name": "QemuTest Development Environment",
-  "image": "mcr.microsoft.com/devcontainers/universal:2",
-  "postCreateCommand": "curl -fsSL https://claude.ai/install.sh | sh && echo 'Claude Code installed successfully!'",
+  "image": "mcr.microsoft.com/devcontainers/base:ubuntu",
+  "postCreateCommand": "curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.40.3/install.sh | bash && . \"$HOME/.nvm/nvm.sh\" && nvm install 22 && npm install -g @anthropic-ai/claude-code && echo 'Node.js 22 and Claude Code installed successfully!'",
   "customizations": {
     "vscode": {
       "extensions": [
